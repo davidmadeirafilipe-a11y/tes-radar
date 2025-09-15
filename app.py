@@ -22,7 +22,7 @@ st.markdown(
 uploaded = st.file_uploader("Upload your Excel (.xlsx)", type=["xlsx"])
 
 def parse_range(cell):
-    \"\"\"Parse strings in 'Faixa_T_°C' into (expr_type, tmin, tmax).
+    """Parse strings in 'Faixa_T_°C' into (expr_type, tmin, tmax)."""
     Supports: 'a-b', '>=a', '≤b', 'a' (single), commas/degree symbols, en-dash.
     Returns (kind, tmin, tmax) where kind in {'interval','ge','le','single','empty'}.
     \"\"\"
